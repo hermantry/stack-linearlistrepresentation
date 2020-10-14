@@ -31,9 +31,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="Bool.h">
+			<Option compilerVar="CC" />
+			<Option compile="1" />
+			<Option link="1" />
+		</Unit>
+		<Unit filename="Herman.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Herman.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
