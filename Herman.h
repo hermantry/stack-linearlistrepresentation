@@ -95,12 +95,8 @@ void CopyList(List *L1, List *L2);
 List FCopyList(List L);
 
 void CpAlokList(List Lin, List *Lout);
-
 void Konkat(List L1, List L2, List *L3);
-
 void Konkat1(List *L1, List *L2, List *L3);
-
 void PecahList(List *L1, List *L2, List L3);
-
 
 #endif // HERMAN_H_INCLUDED
