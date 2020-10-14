@@ -21,3 +21,9 @@ void AllocTab(address *P) {
         FirstAvail = Next(FirstAvail);
     }
 }
+
+void DeallocTab(address P)
+{
+    Next(P)=FirstAvail;
+    FirstAvail=(P);
+}
