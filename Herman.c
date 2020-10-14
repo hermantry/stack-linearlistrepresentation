@@ -11,3 +11,13 @@ void InitTab() {
     Next(IndexMax) = Nil;
     FirstAvail = IndexMin;
 }
+
+void AllocTab(address *P) {
+    if (MemFull()) {
+        (*P) = Nil;
+        printf("Tidak tersedia memori siap pakai.\n");
+    } else {
+        (*P) = FirstAvail;
+        FirstAvail = Next(FirstAvail);
+    }
+}
