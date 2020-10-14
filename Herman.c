@@ -26,3 +26,8 @@ void DeallocTab(address P) {
     Next(P) = FirstAvail;
     FirstAvail = (P);
 }
+
+boolean ListEmpty(List L)
+{
+    return (First(L)==Nil);
+}
