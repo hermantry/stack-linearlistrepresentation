@@ -31,7 +31,6 @@ boolean ListEmpty(List L) {
     return (First(L) == Nil);
 }
 
-void CreateList(List *L)
-{
-    First(*L)=Nil;
+void CreateList(List *L) {
+    First(*L) = Nil;
 }
