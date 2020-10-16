@@ -35,13 +35,11 @@ void CreateList(List *L) {
     First(*L) = Nil;
 }
 
-address Search(List L, infotype X)
-{
-    address P=First(L);
+address Search(List L, infotype X) {
+    address P = First(L);
 
-    while(Info(P)!=X && P!=Nil)
-    {
-        P=Next(P);
-    }
+    while(Info(P) != X && P != Nil)
+        P = Next(P);
+
     return P;
 }
