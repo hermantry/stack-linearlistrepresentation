@@ -59,3 +59,24 @@ boolean FSearch(List L, address P) {
 
     return Found;
 }
+
+address SearchPrec(List L, infotype X)
+{
+    address P,Prec;
+
+    P=Search(L,X);
+    Prec=First(L);
+    while(Next(Prec)!=Nil && Next(Prec)!=P)
+    {
+        Prec=Next(Prec);
+    }
+
+    if(Next(Prec)==P)
+    {
+        return Prec;
+    }
+    else
+    {
+        return Nil;
+    }
+}
