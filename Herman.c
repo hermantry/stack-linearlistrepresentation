@@ -44,12 +44,11 @@ address Search(List L, infotype X) {
     return P;
 }
 
-boolean FSearch(List L, address P)
-{
-    address Pp=First(L);
-    boolean Found=false;
+boolean FSearch(List L, address P) {
+    address Pp = First(L);
+    boolean Found = false;
 
-    while(Found==false && Pp!=Nil)
+    while(Found == false && Pp != Nil)
     {
         if(Pp==P)
         {
