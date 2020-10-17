@@ -50,13 +50,12 @@ boolean FSearch(List L, address P) {
 
     while (Found == false && Pp != Nil) {
         if (Pp == P) {
-            Found=true;
+            Found = true;
             break;
-        }
-        else
-        {
-            Pp=Next(Pp);
+        } else {
+            Pp = Next(Pp);
         }
     }
+
     return Found;
 }
