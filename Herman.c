@@ -38,7 +38,7 @@ void CreateList(List *L) {
 address Search(List L, infotype X) {
     address P = First(L);
 
-    while(Info(P) != X && P != Nil)
+    while (Info(P) != X && P != Nil)
         P = Next(P);
 
     return P;
@@ -49,8 +49,7 @@ boolean FSearch(List L, address P) {
     boolean Found = false;
 
     while (Found == false && Pp != Nil) {
-        if(Pp==P)
-        {
+        if (Pp == P) {
             Found=true;
             break;
         }
