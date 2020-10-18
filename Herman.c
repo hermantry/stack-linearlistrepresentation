@@ -52,9 +52,8 @@ boolean FSearch(List L, address P) {
         if (Pp == P) {
             Found = true;
             break;
-        } else {
+        } else
             Pp = Next(Pp);
-        }
     }
 
     return Found;
@@ -72,4 +71,14 @@ address SearchPrec(List L, infotype X) {
         return Prec;
     else
         return Nil;
+}
+
+void InsVFirst(List *L, infotype X) {
+    address P;
+
+    AllocTab(&P);
+    if (P != Nil) {
+        Info(P) = X;
+        InsertFirst(&(*L), P);
+    }
 }
