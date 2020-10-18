@@ -92,3 +92,12 @@ void InsVLast(List *L, infotype X) {
         InsertLast(&(*L), P);
     }
 }
+
+void DelVFirst(List *L, infotype *X) {
+    address P;
+
+    DelFirst(&(*L), &P);
+    (*X) = Info(P);
+    Next(P) = Nil;
+    DeallocTab(P);
+}
