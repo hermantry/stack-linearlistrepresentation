@@ -82,3 +82,13 @@ void InsVFirst(List *L, infotype X) {
         InsertFirst(&(*L), P);
     }
 }
+
+void InsVLast(List *L, infotype X) {
+    address P;
+
+    AllocTab(&P);
+    if (P != Nil) {
+        Info(P) = X;
+        InsertLast(&(*L), P);
+    }
+}
