@@ -5,7 +5,7 @@ boolean MemFull() { return (FirstAvail == Nil); }
 void InitTab() {
     address P;
 
-    for (P=IndexMin; P<IndexMax; P++)
+    for (P = IndexMin; P < IndexMax; P++)
         Next(P) = P + 1;
 
     Next(IndexMax) = Nil;
@@ -60,23 +60,16 @@ boolean FSearch(List L, address P) {
     return Found;
 }
 
-address SearchPrec(List L, infotype X)
-{
-    address P,Prec;
+address SearchPrec(List L, infotype X) {
+    address P, Prec;
 
-    P=Search(L,X);
-    Prec=First(L);
-    while(Next(Prec)!=Nil && Next(Prec)!=P)
-    {
-        Prec=Next(Prec);
-    }
+    P=Search(L, X);
+    Prec = First(L);
+    while(Next(Prec) != Nil && Next(Prec) != P)
+        Prec = Next(Prec);
 
-    if(Next(Prec)==P)
-    {
+    if (Next(Prec) == P)
         return Prec;
-    }
     else
-    {
         return Nil;
-    }
 }
