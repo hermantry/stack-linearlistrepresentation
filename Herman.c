@@ -109,3 +109,13 @@ void DelVLast(List *L, infotype *X) {
     (*X) = Info(P);
     DeallocTab(P);
 }
+
+void InsertFirst(List *L, address P) {
+    if (ListEmpty(*L)) {
+        Next(P) = Nil;
+        First(*L) = P;
+    } else {
+        Next(P) = First(*L);
+        First(*L) = P;
+    }
+}
