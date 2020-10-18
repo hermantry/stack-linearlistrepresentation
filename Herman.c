@@ -101,3 +101,11 @@ void DelVFirst(List *L, infotype *X) {
     Next(P) = Nil;
     DeallocTab(P);
 }
+
+void DelVLast(List *L, infotype *X) {
+    address P;
+
+    DelLast(&(*L), &P);
+    (*X) = Info(P);
+    DeallocTab(P);
+}
